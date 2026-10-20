@@ -80,20 +80,20 @@ body {
   position: relative; z-index: 1;
   min-height: 100%;
   display: grid; grid-template-rows: auto 1fr auto;
-  padding-block: clamp(20px, 4vh, 40px);
+  padding-block: clamp(24px, 5vh, 52px);
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
 .inner { width: 100%; max-width: 1240px; margin-inline: auto; padding-inline: clamp(0px, 3.5vw, 40px); }
 
 .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.logo { height: clamp(22px, 1.2rem + 0.8vw, 32px); width: auto; color: var(--star); display: block; }
+.logo { height: clamp(26px, 1.3rem + 1vw, 40px); width: auto; color: var(--star); display: block; }
 .logo .spark { transform-box: fill-box; transform-origin: 50% 54.6%; transition: scale .6s var(--ease); }
 .logo:hover .spark { scale: 1.25; }
-.lang { display: flex; gap: 2px; font-family: var(--font-mono); font-size: 12px; }
+.lang { display: flex; gap: 4px; font-family: var(--font-mono); font-size: clamp(13px, .7rem + .3vw, 16px); }
 .lang button {
   background: none; border: 0; cursor: pointer; color: var(--mute);
-  font: inherit; letter-spacing: .1em; padding: 8px 8px 6px;
+  font: inherit; letter-spacing: .1em; padding: 10px 10px 7px;
   border-bottom: 1px solid transparent; transition: color .3s, border-color .3s;
 }
 .lang button[aria-pressed="true"] { color: var(--star); border-bottom-color: var(--amber); }
@@ -144,10 +144,10 @@ h1 em { font-style: normal; color: var(--amber); }
 
 .foot {
   display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px;
-  font-size: 12px; color: var(--mute);
+  font-size: clamp(13px, .75rem + .25vw, 16px); color: var(--mute);
 }
 .foot p { margin: 0; }
-.coords { display: grid; gap: 4px; text-align: right; font-family: var(--font-mono); font-size: 11px; font-variant-numeric: tabular-nums; letter-spacing: .04em; }
+.coords { display: grid; gap: 4px; text-align: right; font-family: var(--font-mono); font-size: clamp(12px, .7rem + .2vw, 14px); font-variant-numeric: tabular-nums; letter-spacing: .04em; }
 .coords b { font-weight: 500; color: var(--star); }
 
 :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 2px; }
